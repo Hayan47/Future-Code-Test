@@ -473,11 +473,64 @@ class _AddVehicleState extends State<AddVehicle> {
                             ),
                           );
                         } else {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const VehicleScreen(),
-                            ),
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                shape: const CircleBorder(),
+                                content: Padding(
+                                  padding: const EdgeInsets.all(25),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Image.asset('assets/images/amico.png'),
+                                      Text(
+                                        'طلبك قيد المراجعة \n سيتم اعلامك بالنتيجة',
+                                        style: GoogleFonts.cairo(
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 12),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const VehicleScreen(),
+                                            ),
+                                          );
+                                          // }
+                                        },
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 5),
+                                          child: Container(
+                                            height: 40,
+                                            width: 100,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(24),
+                                              color: Colors.blue.shade900,
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                'موافق',
+                                                style: GoogleFonts.cairo(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 19,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
                           );
                         }
                       },
