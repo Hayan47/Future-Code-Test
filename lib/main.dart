@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
       locale: const Locale('ar'),
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       supportedLocales: const [Locale('ar')],
+      theme: ThemeData(
+        androidOverscrollIndicator: AndroidOverscrollIndicator.stretch,
+      ),
       home: LoginScreen(),
     );
   }

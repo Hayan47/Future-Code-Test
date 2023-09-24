@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:future_code_test/view/screens/add_photo.dart';
 import 'package:future_code_test/view/screens/login_screen.dart';
-import 'package:future_code_test/view/widgets/my_textfiels.dart';
+import 'package:future_code_test/view/widgets/mytextfield.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignupScreen extends StatefulWidget {
